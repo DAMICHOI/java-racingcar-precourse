@@ -10,4 +10,9 @@ public class CarName {
 		validation.carNameCheck(carName);
 		this.carName = carName;
 	}
+
+	@Override
+	public String toString() {
+		return carName;
+	}
 }
