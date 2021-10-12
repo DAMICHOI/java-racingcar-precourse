@@ -1,4 +1,4 @@
-package racinggame;
+package racinggame.domain;
 
 public class CarPosition {
 	private static final int POSITION_INIT = 0;

@@ -1,4 +1,4 @@
-package racinggame;
+package racinggame.domain;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -75,5 +75,13 @@ public class Cars {
 			farthestPosition = Math.max(car.getCarPosition(), farthestPosition);
 		}
 		return farthestPosition;
+	}
+
+	public String raceResult() {
+		StringBuilder result = new StringBuilder();
+		cars.forEach(car -> {
+			result.append(car.print()).append("\n");
+		});
+		return result.toString();
 	}
 }
