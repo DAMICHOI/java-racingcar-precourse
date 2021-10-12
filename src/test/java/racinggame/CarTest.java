@@ -18,15 +18,13 @@ public class CarTest {
 	@Test
 	@DisplayName("4 이상일 경우 전진할 수 있는 상태이다.")
 	void car_status_go() {
-		MoveStatus status = car.canMove(4);
-		assertThat(status.isGo()).isTrue();
+		assertThat(car.canMove(4).isGo()).isTrue();
 	}
 
 	@Test
 	@DisplayName("3 이하일 경우 멈춘다.")
 	void car_status_stop() {
-		MoveStatus status = car.canMove(3);
-		assertThat(status.isStop()).isTrue();
+		assertThat(car.canMove(3).isStop()).isTrue();
 	}
 
 	@Test
@@ -43,5 +41,14 @@ public class CarTest {
 		MoveStatus status = car.canMove(3);
 		CarPosition carPosition = car.move(status);
 		assertThat(carPosition.getPosition()).isEqualTo(0);
+	}
+
+	@Test
+	@DisplayName("tobi 자동차가 1칸 이동할 경우 결과를 'tobi : -'와 같이 프린트한다.")
+	void car_move_go_print() {
+		MoveStatus status = car.canMove(4);
+		CarPosition carPosition = car.move(status);
+		assertThat(carPosition.toString()).isEqualTo("-");
+		assertThat(car.print()).isEqualTo("tobi : -");
 	}
 }
