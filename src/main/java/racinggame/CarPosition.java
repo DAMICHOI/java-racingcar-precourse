@@ -15,4 +15,13 @@ public class CarPosition {
 	public int getPosition() {
 		return position;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder marker = new StringBuilder();
+		for (int i = 0; i < position; i++) {
+			marker.append("-");
+		}
+		return marker.toString();
+	}
 }
