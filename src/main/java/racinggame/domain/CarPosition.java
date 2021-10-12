@@ -1,11 +1,13 @@
 package racinggame.domain;
 
+import static racinggame.domain.CarConst.*;
+
 public class CarPosition {
-	private static final int POSITION_INIT = 0;
+
 	private int position;
 
 	public CarPosition() {
-		this.position = POSITION_INIT;
+		this.position = CAR_POSITION_INIT;
 	}
 
 	public int increase() {

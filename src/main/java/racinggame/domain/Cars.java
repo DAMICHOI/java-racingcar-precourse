@@ -1,5 +1,7 @@
 package racinggame.domain;
 
+import static racinggame.domain.CarConst.*;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -7,11 +9,11 @@ import java.util.List;
 import java.util.Map;
 
 public class Cars {
-	private static final String STRING_SEPERATOR = ",";
+
 	private final List<Car> cars;
 
 	public Cars(String carNames) {
-		List<String> cars = Arrays.asList(carNames.split(STRING_SEPERATOR));
+		List<String> cars = Arrays.asList(carNames.split(STRING_SEPARATOR));
 		this.cars = initCar(cars);
 	}
 
