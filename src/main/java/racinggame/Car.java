@@ -43,4 +43,8 @@ public class Car {
 	public int getCarPosition() {
 		return carPosition.getPosition();
 	}
+
+	public String print() {
+		return carName.toString() + " : " + carPosition.toString();
+	}
 }
