@@ -1,10 +1,9 @@
 package racinggame.view;
 
 import static java.lang.String.*;
+import static racinggame.view.ViewMessages.*;
 
 public class OutputView {
-	private static final String OUTPUT_FINISH_MESSAGE = "실행 결과";
-	private final String OUTPUT_RACE_WINNER = "최종 우승자는 %s 입니다.";
 
 	/**
 	 * 레이스 끝난 후 종료 메시지를 출력한다.
