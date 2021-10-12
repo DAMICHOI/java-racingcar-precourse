@@ -1,6 +1,7 @@
 package utils;
 
 import static racinggame.domain.CarConst.*;
+import static utils.ErrorMessages.*;
 
 import racinggame.exception.RaceException;
 
@@ -44,7 +45,7 @@ public class Validation {
 	 */
 	private static void raceCountCheck(String inputCount) {
 		if (!inputCount.matches("[0-9]+")) {
-			throw new RaceException(ErrorMessages.RACE_COUNT_ONLY_NUMBER);
+			throw new RaceException(RACE_COUNT_ONLY_NUMBER);
 		}
 	}
 
@@ -64,10 +65,10 @@ public class Validation {
 	 */
 	public static void carNameCheck(String carName) {
 		if (carName == null || carName.isEmpty()) {
-			throw new RaceException(ErrorMessages.CAR_NAME_EMPTY_MESSAGE);
+			throw new RaceException(CAR_NAME_EMPTY_MESSAGE);
 		}
-		if (carName.length() > 5) {
-			throw new RaceException(ErrorMessages.CAR_NAME_LENGTH_5_UP_MESSAGE);
+		if (carName.length() > CAR_NAME_LENGTH_STANDARD_NUMBER) {
+			throw new RaceException(CAR_NAME_LENGTH_5_UP_MESSAGE);
 		}
 	}
 

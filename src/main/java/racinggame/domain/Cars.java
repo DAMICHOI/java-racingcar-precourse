@@ -79,6 +79,10 @@ public class Cars {
 		return farthestPosition;
 	}
 
+	/**
+	 * 레이스 결과를 반환한다.
+	 * @return String
+	 */
 	public String raceResult() {
 		StringBuilder result = new StringBuilder();
 		cars.forEach(car -> {
